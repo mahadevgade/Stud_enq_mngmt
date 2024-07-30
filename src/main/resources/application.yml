@@ -1,0 +1,56 @@
+server:
+  port: 9090
+  
+  
+  
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/studentEnq
+    username: root
+    password: mahadev7041
+    
+    
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+          format_sql : true
+
+
+############################## SMTP Props ######################################
+
+#spring:
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: mahadevgade7@gmail.com
+    password: zkjh oocy pmxy iyyy
+    properties:
+      mail:
+        smtp:
+         auth: true
+         starttls:
+          enable: true
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       

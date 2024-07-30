@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Bootstrap demo</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+
+
+</head>
+
+<body>
+	<h1>Add student Enquiry Here</h1>
+
+	<font color="green"><h3>
+			<p th:text="${smsg}" />
+		</h3></font>
+
+	<font color="red"><h3>
+			<p th:text="${emsg}" />
+		</h3></font>
+
+
+	<table>
+		<form th:action="@{/enquiry}" th:object="${studentEnq}" method="post">
+			<tr>
+				<td>Student Name:</td>
+				<td><input type="text" th:field="*{name}" required></td>
+			</tr>
+
+
+			<tr>
+				<td>Class Mode:</td>
+				<td><select th:field="*{classMode}">
+						<option value="">-select-</option>
+						<option value="online">Online</option>
+						<option value="classroom">Classroom</option>
+				</select></td>
+			</tr>
+
+
+			<tr>
+				<td>Courses:</td>
+				<td><select th:field="*{course}">
+						<option value="">-select-</option>
+						<option value="java">Java</option>
+						<option value="python">Python</option>
+						<option value="devops">Devops</option>
+				</select></td>
+			</tr>
+
+			<tr>
+				<td>Enquiry status:</td>
+				<td><select th:field="*{status}">
+						<option value="">-select-</option>
+						<option value="new">New</option>
+						<option value="enrolled">Enrolled</option>
+						<option value="lost">Lost</option>
+				</select></td>
+			</tr>
+
+			<tr>
+				<td><input type="submit" value="SUBMIT" class="btn btn-primary"></td>
+			</tr>
+
+			<tr>
+				<td><a href="/enquiry" class="btn btn-secondary">RESET</a></td>
+			</tr>
+
+			<tr>
+				<td><a href="/enquiry" class="btn btn-success">Add Enquiry</a></td>
+			</tr>
+
+			<tr>
+				<td><a href="/enquiries" class="btn btn-warning">View
+						Enquiry</a></td>
+			</tr>
+
+			<tr>
+				<td><a href="/logout" class="btn btn-danger">LOGOUT</a></td>
+			</tr>
+
+		</form>
+
+
+
+
+	</table>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+		crossorigin="anonymous"></script>
+</body>
+
+
+</html>
+
+
+

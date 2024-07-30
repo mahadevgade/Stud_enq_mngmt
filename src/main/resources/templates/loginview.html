@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Bootstrap demo</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+
+
+</head>
+
+
+
+<body>
+	<h1>LOGIN PAGE</h1>
+	
+	<font color="red"><h2><p  th:text="${errmsg}"/></h2></font>
+	
+	<table>
+		<form th:action="@{/login}" th:object="${counsellor}" method="post">
+
+
+			<tr>
+				<td>EMAIL-ID:</td>
+				<td><input type="text" th:field="*{email}"></td>
+			</tr>
+
+			<tr>
+				<td>PASSWORD:</td>
+				<td><input type="text" th:field="*{pwd}"></td>
+			</tr>
+			
+			<tr>
+				<td><input type="submit" class="btn btn-primary" value="LOGIN"></td>
+			</tr>
+
+		</form>
+
+	</table>
+
+	<div>
+		<a href="register" class="btn btn-warning">CREATE NEW</a>
+	</div>
+	<div>
+		<a href="forgot-pwd" class="btn btn-success">Forget Password?</a>
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+		crossorigin="anonymous"></script>
+</body>
+
+
+</html>
