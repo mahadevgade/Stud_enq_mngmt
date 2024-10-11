@@ -5,6 +5,7 @@ public class SearchCriteria {
 	private String course;
 	private String classMode;
 	private String status;
+	
 	public String getCourse() {
 		return course;
 	}
